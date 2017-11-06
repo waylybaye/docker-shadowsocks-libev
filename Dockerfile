@@ -20,8 +20,7 @@ RUN set -ex && \
                                 libsodium-dev \
                                 mbedtls-dev \
                                 pcre-dev \
-                                tar \
-                                udns-dev && \
+                                tar && \
 
     cd /tmp/ && \
     git clone https://github.com/shadowsocks/shadowsocks-libev.git && \
@@ -73,5 +72,7 @@ CMD ss-server -s :: -s $SERVER_ADDR \
               -m "$METHOD" \
               -t $TIMEOUT \
               -d "$DNS_ADDR" \
+              --plugin obfs-server \
+              --plugin-opts "${OBFS_OPTS}" \
               --fast-open \
               -u $OPTIONS
