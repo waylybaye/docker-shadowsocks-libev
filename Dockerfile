@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine
 MAINTAINER HyperApp <hyperappcloud@gmail.com>
 
 ARG SS_VER=3.1.0
