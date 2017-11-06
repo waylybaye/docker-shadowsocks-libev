@@ -67,7 +67,7 @@ EXPOSE $SERVER_PORT/tcp
 EXPOSE $SERVER_PORT/udp
 
 
-CMD ss-server -s $SERVER_ADDR \
+CMD ss-server -s :: -s $SERVER_ADDR \
               -p $SERVER_PORT \
               -k "$PASSWORD" \
               -m "$METHOD" \
