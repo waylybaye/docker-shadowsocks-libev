@@ -2,7 +2,7 @@ FROM alpine:edge
 MAINTAINER HyperApp <hyperappcloud@gmail.com>
 
 ARG SS_VER=3.1.0
-ARG SS_OBFS_VER=0.0.3
+ARG SS_OBFS_VER=0.0.4
 
 RUN set -ex && \
     apk add --no-cache udns && \
